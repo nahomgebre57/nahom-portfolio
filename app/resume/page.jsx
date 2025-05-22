@@ -11,11 +11,12 @@ import {
 
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
+
 // about page
 const about = {
   title: "About Me",
   description:
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio tenetur voluptatibus.",
+    "Creative and motivated developer with 2+ years of experience building modern and responsive web apps. Always ready to learn and grow.",
   info: [
     {
       fieldName: "Name",
@@ -30,8 +31,8 @@ const about = {
       fieldValue: "2+ years",
     },
     {
-      fieldName: "Skype",
-      fieldValue: "nahomgebre",
+      fieldName: "LinkedIn",
+      fieldValue: "nahomgebre73",
     },
     {
       fieldName: "Freelance",
@@ -54,37 +55,37 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My Experience",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
+    "Over the years, I’ve gained hands-on experience in full-stack development, UI/UX design, and freelance web projects.",
   items: [
     {
-      company: "Tech Solutions",
+      company: "Maleda Tech Solutions",
       position: "FUll Stack Developer",
-      duration: "2021 - Present",
+      duration: "2023 - Present",
     },
     {
       company: "web Design Studio",
       position: "Frontend Developer",
-      duration: "Summer 2021",
+      duration: "Summer 2024",
     },
     {
       company: "E-commerce Startup",
       position: "Freelance Web Developer",
-      duration: "2020 - 2021",
+      duration: "2022 - 2023",
     },
     {
       company: "Digital Agency",
       position: "UI/UX Designer",
-      duration: "2019 - 2020",
+      duration: "2024 - 2025",
     },
     {
       company: "Software Development Firm",
       position: "Junior Developer",
-      duration: "2018 - 2019",
+      duration: "2023 - 2024",
     },
     {
       company: "Dorcas tech",
       position: "Junior Developer",
-      duration: "2012 - 2023",
+      duration: "2024 - 2025",
     },
   ],
 };
@@ -93,12 +94,12 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My Education",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
+    "Here's a glimpse into my learning journey—focused, practical, and always evolving with tech.",
   items: [
     {
       institution: "University of Gondar",
       degree: "Computer Science",
-      duration: "2021 - 2025",
+      duration: "2022 - present",
     },
     {
       institution: "Code Academy",
@@ -113,10 +114,10 @@ const education = {
     {
       institution: "Tech Institute",
       degree: "Certified Web Developer",
-      duration: "2021 - 2022",
+      duration: "2022 - 2023",
     },
     {
-      institution: "Design School",
+      institution: "Geez Design School",
       degree: "Diploma in Graphic Design",
       duration: "2021",
     },
@@ -128,7 +129,7 @@ const skills = {
   //icon: "/assets/resume/rocket.svg",
   title: "My Skills",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
+    "A blend of technical expertise and creative thinking—these are the tools I use to bring ideas to life.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -316,8 +317,10 @@ const Resume = () => {
           </div>
         </Tabs>
       </div>
+      
     </motion.div>
   );
-};
+  
+}
 
 export default Resume;

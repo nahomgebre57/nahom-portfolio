@@ -14,7 +14,11 @@ const Photo = () => {
   }}
         
         
-        className="w-[298px] h-[298px] xl:w-w[498px] xl:h-[498px] mix-blend-lighten absolute">
+        className="w-[298px] h-[298px] xl:w-w[498px] xl:h-[498px] mix-blend-lighten absolute overflow-hidden radius-full"  style={{
+    clipPath: 'circle(50% at 49% 39%)',
+    borderRadius: '50%',
+  }}>
+          
             <Image
                 src="/assets/photo.png" priority quality={100} fill alt="" className="object-contain"
                 

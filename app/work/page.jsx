@@ -71,7 +71,7 @@ const projects = [
   stack: [{ name: "HTML" }, { name: "CSS" }, { name: "JavaScript" }],
   image: "/assets/work/thumb2.png",
   live: "https://digitalwatchshop.netlify.app/",
-  github: "https://github.com/nahomgebre57/DigitalWatchShop",
+  github: "https://github.com/nahomgebre57/DigitalWatch",
 }
 
   {

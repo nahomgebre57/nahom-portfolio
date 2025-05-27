@@ -72,7 +72,7 @@ const projects = [
   image: "/assets/work/thumb2.png",
   live: "https://digitalwatchshop.netlify.app/",
   github: "https://github.com/nahomgebre57/DigitalWatch",
-}
+},
 
   {
     num: "04",

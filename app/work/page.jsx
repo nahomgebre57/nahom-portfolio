@@ -45,30 +45,8 @@ const projects = [
     live: "https://shoopyy.netlify.app/",
     github: "https://github.com/nahomgebre57/AdminDashbord-React",
   },
-  {
-    num: "02",
-    category: "fullstack",
-    title: "project 2",
-    description:
-      "A React-based online store featuring product listings, filters, and responsive UI.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb2.png",
-    live: "https://github.com/nahomgebre57/E-commerce-mern",
-    github: "https://github.com/nahomgebre57/E-commerce-mern",
-  },
-  {
-    num: "03",
-    category: "fullstack",
-    title: "project 3",
-    description:
-      "A MERN stack app for managing hospital data including patients, doctors, and appointments.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb3.png",
-    live: "https://github.com/nahomgebre57/hopitalManagemnt-system",
-    github: "https://github.com/nahomgebre57/hopitalManagemnt-system",
-  },
    {
-    num: '04',
+    num: '02',
     category: 'fullstack',
     title: 'Social Media Chat App',
     description:
@@ -80,9 +58,33 @@ const projects = [
       { name: "MongoDB" },
     ],
     image: "/assets/work/thumb3.png",
-    live: "https://github.com/nahomgebre57/scocialMediaMern",
+    live: "https://nahgram.onrender.com/",
     github: "https://github.com/nahomgebre57/scocialMediaMern",
   },
+
+  {
+    num: "03",
+    category: "fullstack",
+    title: "project 2",
+    description:
+      "A React-based online store featuring product listings, filters, and responsive UI.",
+    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
+    image: "/assets/work/thumb2.png",
+    live: "https://github.com/nahomgebre57/E-commerce-mern",
+    github: "https://github.com/nahomgebre57/E-commerce-mern",
+  },
+  {
+    num: "04",
+    category: "fullstack",
+    title: "project 3",
+    description:
+      "A MERN stack app for managing hospital data including patients, doctors, and appointments.",
+    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
+    image: "/assets/work/thumb3.png",
+    live: "https://github.com/nahomgebre57/hopitalManagemnt-system",
+    github: "https://github.com/nahomgebre57/hopitalManagemnt-system",
+  },
+  
 ];
 
 const Work = () => {

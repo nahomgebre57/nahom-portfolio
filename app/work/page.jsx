@@ -62,17 +62,18 @@ const projects = [
     github: "https://github.com/nahomgebre57/scocialMediaMern",
   },
 
-  {
-    num: "03",
-    category: "fullstack",
-    title: "project 2",
-    description:
-      "A React-based online store featuring product listings, filters, and responsive UI.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb2.png",
-    live: "https://github.com/nahomgebre57/E-commerce-mern",
-    github: "https://github.com/nahomgebre57/E-commerce-mern",
-  },
+ {
+  num: "03",
+  category: "fullstack",
+  title: "Digital Watch Shop",
+  description:
+   "Responsive online store with product listings and filters, built using HTML, CSS, and JavaScript.",
+  stack: [{ name: "HTML" }, { name: "CSS" }, { name: "JavaScript" }],
+  image: "/assets/work/thumb2.png",
+  live: "https://digitalwatchshop.netlify.app/",
+  github: "https://github.com/nahomgebre57/DigitalWatchShop",
+}
+
   {
     num: "04",
     category: "fullstack",

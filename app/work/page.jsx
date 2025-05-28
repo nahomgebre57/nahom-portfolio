@@ -57,7 +57,7 @@ const projects = [
       { name: "Express.js" },
       { name: "MongoDB" },
     ],
-    image: "/assets/work/thumb3.png",
+    image: "/assets/work/thumb22.png",
     live: "https://nahgram.onrender.com/",
     github: "https://github.com/nahomgebre57/scocialMediaMern",
   },
@@ -69,22 +69,10 @@ const projects = [
   description:
    "Responsive online store with product listings and filters, built using HTML, CSS, and JavaScript.",
   stack: [{ name: "HTML" }, { name: "CSS" }, { name: "JavaScript" }],
-  image: "/assets/work/thumb2.png",
+  image: "/assets/work/pic3.png",
   live: "https://digitalwatchshop.netlify.app/",
   github: "https://github.com/nahomgebre57/DigitalWatch",
 },
-
-  {
-    num: "04",
-    category: "fullstack",
-    title: "project 3",
-    description:
-      "A MERN stack app for managing hospital data including patients, doctors, and appointments.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb3.png",
-    live: "https://github.com/nahomgebre57/hopitalManagemnt-system",
-    github: "https://github.com/nahomgebre57/hopitalManagemnt-system",
-  },
   
 ];
 

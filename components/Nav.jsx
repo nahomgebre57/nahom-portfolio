@@ -1,54 +1,35 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { use } from "react";
-
+import { useState } from "react";
 
 const links = [
-    {
-        name: "Home",
-        path: "/",
-    },
-
-    {
-        name: "services",
-        path: "#services",
-    },
-
-    {
-        name: "resume",
-        path: "#resume",
-    },
-
-    {
-        name: "work",
-        path: "#work",
-    },
-
-    {
-        name: "contact",
-        path: "#contact",
-    },
+  { name: "home", path: "#home" },
+  { name: "services", path: "#services" },
+  { name: "resume", path: "#resume" },
+  { name: "work", path: "#work" },
+  { name: "contact", path: "#contact" },
 ];
 
-const Nav= () => { 
-    const pathname = usePathname();
-   
-    return (
-    <nav className="flex gap-8">
-        {links.map((link,index) => {
-            return(
-            <Link href={link.path} 
-            key={index} 
-            className={`${link.path === pathname && "text-accent border-b-2 border-accent"} capitalize font-medium hover:text-accent transition-all`}> 
-            {link.name}
-            </Link>
-            );
-        })}
-    </nav>
-    );
+const Nav = () => {
+  const [activeHash, setActiveHash] = useState("#home");
 
+  return (
+    <nav className="flex gap-8">
+      {links.map((link, index) => (
+        <Link
+          href={link.path}
+          key={index}
+          onClick={() => setActiveHash(link.path)}
+          className={`capitalize font-medium transition-all hover:text-accent ${
+            activeHash === link.path ? "text-accent border-b-2 border-accent" : ""
+          }`}
+        >
+          {link.name}
+        </Link>
+      ))}
+    </nav>
+  );
 };
 
 export default Nav;

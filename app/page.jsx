@@ -129,18 +129,18 @@ export default function Page() {
   };
 
   return (
-    <main className="scroll-container">
-      <section id="home" className="section mb-40"><Home /></section>
-      <motion.section {...fadeUp} id="services" className="section mb-32 scroll-mt-20">
+    <main className="scroll-container pt-24">
+      <section id="home" className="section mb-40 scroll-mt-32"><Home /></section>
+      <motion.section {...fadeUp} id="services" className="section mb-32 scroll-mt-40">
         <Services />
       </motion.section>
-      <motion.section {...fadeUp} id="resume" className="section mb-32 scroll-mt-20">
+      <motion.section {...fadeUp} id="resume" className="section mb-32 scroll-mt-40">
         <Resume />
       </motion.section>
-      <motion.section {...fadeUp} id="work" className="section mb-30 scroll-mt-20">
+      <motion.section {...fadeUp} id="work" className="section mb-30 scroll-mt-40">
         <Work />
       </motion.section>
-      <motion.section {...fadeUp} id="contact" className="section scroll-m-20">
+      <motion.section {...fadeUp} id="contact" className="section mb-32 scroll-m-40">
         <Contact />
       </motion.section>
     </main>

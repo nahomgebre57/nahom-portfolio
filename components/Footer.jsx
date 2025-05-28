@@ -1,4 +1,4 @@
-import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 
 const Footer = () => {
@@ -56,15 +56,15 @@ const Footer = () => {
 
       {/* Social Icons */}
       <div className="mt-12 text-center space-x-6 text-xl">
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/nahomgebre57" target="_blank" rel="noopener noreferrer">
           <FaGithub className="inline-block hover:text-accent transition" />
         </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/nahomgebre73" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="inline-block hover:text-accent transition" />
         </a>
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-          <FaFacebook className="inline-block hover:text-accent transition" />
-        </a>
+          <a href="mailto:nahomgebre73@gmail.com">
+    <FaEnvelope className="inline-block hover:text-accent transition" />
+  </a>
       </div>
     </footer>
   );

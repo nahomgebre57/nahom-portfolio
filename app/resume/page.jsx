@@ -58,9 +58,19 @@ const experience = {
     "Over the years, I’ve gained hands-on experience in full-stack development, UI/UX design, and freelance web projects.",
   items: [
     {
+      company: "Kuraz Technologies",
+      position: "Frontend Developer intern",
+      duration: "2025 - present",
+    },
+     {
+      company: "Oasisinfobyte",
+      position: "Web Development and Designing intern",
+      duration: "2025 - present",
+    },
+    {
       company: "Maleda Tech Solutions",
-      position: "FUll Stack Developer",
-      duration: "2023 - Present",
+      position: "FUll Stack Developer intern",
+      duration: "2023 - 2024",
     },
     {
       company: "web Design Studio",

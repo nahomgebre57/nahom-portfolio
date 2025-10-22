@@ -7,16 +7,34 @@ import {
   FaReact,
   FaFigma,
   FaNodeJs,
+  FaPython,
+  FaJava,
+  FaGitAlt,
+  FaGithub,
 } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation } from "swiper/modules";
 
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import {
+  SiTailwindcss, SiNextdotjs, SiMongodb, SiExpress, SiMysql, SiTypescript,
+  SiRedux,
+  SiSass,
+  SiDocker,
+  SiFirebase,
+  SiJest,
 
+  SiLinux,
+  SiWebpack
+} from "react-icons/si";
 
 // about page
 const about = {
   title: "About Me",
   description:
-    "Creative and motivated developer with 2+ years of experience building modern and responsive web apps. Always ready to learn and grow.",
+    "Passionate full-stack developer with 2+ years of experience building modern, responsive web applications. Strong foundation in computer science principles and a continuous learner always exploring new technologies. I enjoy solving complex problems and creating efficient, user-friendly solutions.",
   info: [
     {
       fieldName: "Name",
@@ -28,11 +46,11 @@ const about = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "2+ years",
+      fieldValue: "2+ Years",
     },
     {
       fieldName: "LinkedIn",
-      fieldValue: "nahomgebre73",
+      fieldValue: "linkedin.com/in/nahomgebre",
     },
     {
       fieldName: "Freelance",
@@ -42,60 +60,53 @@ const about = {
       fieldName: "Email",
       fieldValue: "nahomgebre73@gmail.com",
     },
-   
     {
-      fieldName: "Language",
+      fieldName: "Location",
+      fieldValue: "Ethiopia",
+    },
+    {
+      fieldName: "Languages",
       fieldValue: "English, Amharic",
     },
   ],
 };
 
-// education
+// experience
 const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My Experience",
   description:
-    "Over the years, I’ve gained hands-on experience in full-stack development, UI/UX design, and freelance web projects.",
+    "Progressive journey through various roles in web development, from internships to professional positions, building expertise in modern technologies.",
   items: [
     {
       company: "Kuraz Technologies",
-      position: "Frontend Developer intern",
-      duration: "2025 - present",
+      position: "Frontend Developer Intern",
+      duration: "2025 - Present",
+      description: "Developing responsive user interfaces using React and TypeScript"
     },
-     {
-      company: "Oasisinfobyte",
-      position: "Web Development and Designing intern",
-      duration: "2025 - present",
+    {
+      company: "Oasis Infobyte",
+      position: "Web Development Intern",
+      duration: "2025 - Present",
+      description: "Building full-stack applications and improving UI/UX design skills"
+    },
+    {
+      company: "Dorcas Tech",
+      position: "Junior Full Stack Developer",
+      duration: "2024 - 2025",
+      description: "Developed and maintained web applications using MERN stack"
     },
     {
       company: "Maleda Tech Solutions",
-      position: "FUll Stack Developer intern",
+      position: "Full Stack Developer Intern",
       duration: "2023 - 2024",
+      description: "Built RESTful APIs and responsive frontend components"
     },
     {
-      company: "web Design Studio",
-      position: "Frontend Developer",
-      duration: "Summer 2024",
-    },
-    {
-      company: "E-commerce Startup",
-      position: "Freelance Web Developer",
+      company: "Freelance Projects",
+      position: "Web Developer",
       duration: "2022 - 2023",
-    },
-    {
-      company: "Digital Agency",
-      position: "UI/UX Designer",
-      duration: "2024 - 2025",
-    },
-    {
-      company: "Software Development Firm",
-      position: "Junior Developer",
-      duration: "2023 - 2024",
-    },
-    {
-      company: "Dorcas tech",
-      position: "Junior Developer",
-      duration: "2024 - 2025",
+      description: "Created custom websites and web applications for various clients"
     },
   ],
 };
@@ -104,91 +115,244 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My Education",
   description:
-    "Here's a glimpse into my learning journey—focused, practical, and always evolving with tech.",
+    "Formal education combined with continuous learning through online courses and practical projects.",
   items: [
     {
       institution: "University of Gondar",
-      degree: "Computer Science",
-      duration: "2022 - present",
+      degree: "BSc in Computer Science",
+      duration: "2022 - Present",
+      description: "Focus on software engineering, algorithms, and data structures"
     },
     {
-      institution: "Code Academy",
-      degree: "Frontend Track",
+      institution: "Meta Front-End Developer",
+      degree: "Professional Certificate",
       duration: "2023",
+      description: "Advanced React, UI/UX principles, and frontend development"
     },
     {
-      institution: "Online Course",
-      degree: "Programming Course",
-      duration: "2022-2023",
-    },
-    {
-      institution: "Tech Institute",
-      degree: "Certified Web Developer",
+      institution: "FreeCodeCamp",
+      degree: "Full Stack Development",
       duration: "2022 - 2023",
+      description: "JavaScript, Node.js, MongoDB, and responsive web design"
     },
     {
       institution: "Geez Design School",
-      degree: "Diploma in Graphic Design",
+      degree: "Graphic Design Diploma",
       duration: "2021",
+      description: "UI/UX design principles and visual communication"
     },
   ],
 };
 
 // skills
 const skills = {
-  //icon: "/assets/resume/rocket.svg",
   title: "My Skills",
   description:
-    "A blend of technical expertise and creative thinking—these are the tools I use to bring ideas to life.",
+    "Comprehensive skill set covering frontend, backend, and development tools. Continuously learning and adapting to new technologies.",
   skillList: [
+    // Frontend
     {
       icon: <FaHtml5 />,
       name: "HTML5",
+      category: "frontend"
     },
     {
       icon: <FaCss3 />,
       name: "CSS3",
+      category: "frontend"
     },
     {
       icon: <FaJs />,
       name: "JavaScript",
+      category: "frontend"
     },
     {
       icon: <FaReact />,
-      name: "react.js",
+      name: "React.js",
+      category: "frontend"
     },
     {
       icon: <SiNextdotjs />,
-      name: "next.js",
+      name: "Next.js",
+      category: "frontend"
     },
     {
       icon: <SiTailwindcss />,
-      name: "tailwind.css",
+      name: "Tailwind CSS",
+      category: "frontend"
     },
     {
-      icon: <FaNodeJs />,
-      name: "node.js",
+      icon: <SiTypescript />,
+      name: "TypeScript",
+      category: "frontend"
     },
+    {
+      icon: <SiRedux />,
+      name: "Redux",
+      category: "frontend"
+    },
+    {
+      icon: <SiSass />,
+      name: "Sass",
+      category: "frontend"
+    },
+
+    // Backend
+    {
+      icon: <FaNodeJs />,
+      name: "Node.js",
+      category: "backend"
+    },
+    {
+      icon: <SiExpress />,
+      name: "Express.js",
+      category: "backend"
+    },
+    {
+      icon: <SiMongodb />,
+      name: "MongoDB",
+      category: "backend"
+    },
+    {
+      icon: <SiMysql />,
+      name: "MySQL",
+      category: "backend"
+    },
+    {
+      icon: <FaPython />,
+      name: "Python",
+      category: "backend"
+    },
+    {
+      icon: <FaJava />,
+      name: "Java",
+      category: "backend"
+    },
+    {
+      icon: <SiDocker />,
+      name: "Docker",
+      category: "backend"
+    },
+    {
+      icon: <SiFirebase />,
+      name: "Firebase",
+      category: "backend"
+    },
+    {
+      icon: <SiJest />,
+      name: "Jest",
+      category: "backend"
+    },
+
+
+    // Tools
     {
       icon: <FaFigma />,
       name: "Figma",
+      category: "tools"
+    },
+    {
+      icon: <FaGitAlt />,
+      name: "Git",
+      category: "tools"
+    },
+    {
+      icon: <FaGithub />,
+      name: "GitHub",
+      category: "tools"
+    },
+    {
+      icon: <SiLinux />,
+      name: "Linux",
+      category: "tools"
+    },
+    {
+      icon: <SiWebpack />,
+      name: "Webpack",
+      category: "tools"
     },
   ],
 };
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+const certifications = {
+  title: "My Certifications",
+  description:
+    "Industry-recognized certifications validating my skills in web development and software engineering.",
+  items: [
+    {
+      src: "/assets/certifications/kuraz.jpg",
+      title: "Internship Completion Certificate",
+      issuer: "Kuraz Technologies",
+      duration: "2025"
+    },
+    {
+      src: "/assets/certifications/react.jpg",
+      title: "Mastering React and Node.js",
+      issuer: "Udemy",
+      duration: "2025"
+    },
+    {
+      src: "/assets/certifications/hacking.jpg",
+      title: "Ethical Hacking and Cyber Security",
+      issuer: "Udemy",
+      duration: "2023"
+    },
+    {
+      src: "/assets/certifications/django.jpg",
+      title: "Django Web Development",
+      issuer: "Udemy",
+      duration: "2022"
+    },
+    {
+      src: "/assets/certifications/deploma.jpg",
+      title: "React Developer",
+      issuer: "Udemy",
+      duration: "2025"
+    },
+    {
+      src: "/assets/certifications/html.jpg",
+      title: "Html, CSS, and JavaScript",
+      issuer: "Udemy",
+      duration: "2022"
+    },
 
+  ],
+};
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { useState } from 'react';
 
 const Resume = () => {
+  // Group skills by category
+  const frontendSkills = skills.skillList.filter(skill => skill.category === 'frontend');
+  const backendSkills = skills.skillList.filter(skill => skill.category === 'backend');
+  const toolSkills = skills.skillList.filter(skill => skill.category === 'tools');
+
+  // State for modal
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Function to handle image click
+  const handleImageClick = (cert) => {
+    setSelectedImage(cert);
+    setIsModalOpen(true);
+  };
+
+  // Function to close modal
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -204,10 +368,11 @@ const Resume = () => {
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience">Experince</TabsTrigger>
+            <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
+            <TabsTrigger value="certifications">Certifications</TabsTrigger>
+            <TabsTrigger value="about">About Me</TabsTrigger>
           </TabsList>
 
           {/* content */}
@@ -285,41 +450,158 @@ const Resume = () => {
                     {skills.description}
                   </p>
                 </div>
-                <ul className="grid grid-cols-2 sg:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px] ">
-                  {skills.skillList.map((skill, index) => {
-                    return (
-                      <li key={index} className="flex items-center gap-2">
+
+                {/* Frontend Skills */}
+                <div className="mb-8">
+                  <h4 className="text-2xl font-semibold mb-6 text-accent border-b border-accent/30 pb-2">
+                    Frontend Development
+                  </h4>
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    {frontendSkills.map((skill, index) => (
+                      <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-300">{skill.icon}</div>
+                            <TooltipTrigger className="w-full h-[120px] bg-[#232329] rounded-xl flex flex-col justify-center items-center gap-3 group hover:bg-[#2a2a32] transition-all duration-300">
+                              <div className="text-4xl group-hover:text-accent transition-all duration-300">
+                                {skill.icon}
+                              </div>
+                              <span className="text-sm text-white/80 group-hover:text-white">
+                                {skill.name}
+                              </span>
                             </TooltipTrigger>
                             <TooltipContent>
-                              <p className="capitalize">{skill.name}</p>
+                              <p>{skill.name}</p>
                             </TooltipContent>
                           </Tooltip>
                         </TooltipProvider>
                       </li>
-                    );
-                  })}
-                </ul>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Backend Skills */}
+                <div className="mb-8">
+                  <h4 className="text-2xl font-semibold mb-6 text-accent border-b border-accent/30 pb-2">
+                    Backend Development
+                  </h4>
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    {backendSkills.map((skill, index) => (
+                      <li key={index}>
+                        <TooltipProvider delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger className="w-full h-[120px] bg-[#232329] rounded-xl flex flex-col justify-center items-center gap-3 group hover:bg-[#2a2a32] transition-all duration-300">
+                              <div className="text-4xl group-hover:text-accent transition-all duration-300">
+                                {skill.icon}
+                              </div>
+                              <span className="text-sm text-white/80 group-hover:text-white">
+                                {skill.name}
+                              </span>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>{skill.name}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Tools */}
+                <div>
+                  <h4 className="text-2xl font-semibold mb-6 text-accent border-b border-accent/30 pb-2">
+                    Tools & Technologies
+                  </h4>
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    {toolSkills.map((skill, index) => (
+                      <li key={index}>
+                        <TooltipProvider delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger className="w-full h-[120px] bg-[#232329] rounded-xl flex flex-col justify-center items-center gap-3 group hover:bg-[#2a2a32] transition-all duration-300">
+                              <div className="text-4xl group-hover:text-accent transition-all duration-300">
+                                {skill.icon}
+                              </div>
+                              <span className="text-sm text-white/80 group-hover:text-white">
+                                {skill.name}
+                              </span>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>{skill.name}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </TabsContent>
 
+            {/* certifications - Now with images */}
+            <TabsContent value="certifications" className="w-full">
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl font-bold">{certifications.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {certifications.description}
+                </p>
+                <ScrollArea className="h-[400px] overflow-y-auto">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                    {certifications.items.map((cert, index) => {
+                      return (
+                        <li
+                          key={index}
+                          className="bg-[#232329] rounded-xl overflow-hidden border border-gray-700 hover:border-accent/50 transition-all duration-300 group cursor-pointer"
+                          onClick={() => handleImageClick(cert)}
+                        >
+                          <div className="h-48 overflow-hidden">
+                            <img
+                              src={cert.src}
+                              alt={cert.title}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                          </div>
+                          <div className="p-4">
+                            <span className="text-accent text-sm">{cert.duration}</span>
+                            <h3 className="text-lg font-semibold mt-1 mb-2 line-clamp-1">
+                              {cert.title}
+                            </h3>
+                            <div className="flex items-center gap-2">
+                              <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                              <p className="text-white/60 text-sm">{cert.issuer}</p>
+                            </div>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </ScrollArea>
+              </div>
+            </TabsContent>
 
             {/* about */}
             <TabsContent value="about" className="w-full text-center xl:text-left">
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 leading-relaxed">
+                  {about.description}
+                </p>
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
-                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
-                        <span className="text-white/60">{item.fieldName}</span>
-                        <span className="text-xl">{item.fieldValue}</span>
-                    </li>
-                    ); 
+                      <li
+                        key={index}
+                        className="flex flex-col xl:flex-row xl:items-start gap-2 xl:gap-8 p-4 bg-[#232329] rounded-xl hover:bg-[#2a2a32] transition-colors duration-300 flex-wrap"
+                      >
+                        <span className="text-white/60 font-medium min-w-[120px] break-words">
+                          {item.fieldName}
+                        </span>
+                        <span className="text-white font-semibold break-words">
+                          {item.fieldValue}
+                        </span>
+                      </li>
+
+
+                    );
                   })}
                 </ul>
               </div>
@@ -327,10 +609,43 @@ const Resume = () => {
           </div>
         </Tabs>
       </div>
-      
+
+      {/* Modal for Full Image View */}
+      {isModalOpen && selectedImage && (
+        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
+          <div className="relative max-w-4xl max-h-full">
+            {/* Close Button */}
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-2 text-black hover:text-accent transition-colors duration-300 z-20"
+            >
+              <X className="w-8 h-8 bg-black" />
+            </button>
+
+
+            {/* Image Container */}
+            <div className="bg-white rounded-lg overflow-hidden">
+              <img
+                src={selectedImage.src}
+                alt={selectedImage.title}
+                className="w-full h-auto max-h-[80vh] object-contain"
+              />
+            </div>
+
+            {/* Image Info */}
+            <div className="mt-4 text-center">
+              <h3 className="text-white text-xl font-bold mb-2">
+                {selectedImage.title}
+              </h3>
+              <p className="text-white/80">
+                {selectedImage.issuer} • {selectedImage.duration}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </motion.div>
   );
-  
 }
 
 export default Resume;

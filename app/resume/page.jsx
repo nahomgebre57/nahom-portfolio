@@ -295,13 +295,13 @@ const certifications = {
       src: "/assets/certifications/hacking.jpg",
       title: "Ethical Hacking and Cyber Security",
       issuer: "Udemy",
-      duration: "2023"
+      duration: "2025"
     },
     {
       src: "/assets/certifications/django.jpg",
       title: "Django Web Development",
       issuer: "Udemy",
-      duration: "2022"
+      duration: "2025"
     },
     {
       src: "/assets/certifications/deploma.jpg",
@@ -313,7 +313,7 @@ const certifications = {
       src: "/assets/certifications/html.jpg",
       title: "Html, CSS, and JavaScript",
       issuer: "Udemy",
-      duration: "2022"
+      duration: "2025"
     },
 
   ],
@@ -585,7 +585,7 @@ const Resume = () => {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 leading-relaxed">
                   {about.description}
                 </p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-6 max-w-[620px] mx-auto xl:mx-0">
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-6 max-w-[620px] m x-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
                       <li
@@ -617,10 +617,11 @@ const Resume = () => {
             {/* Close Button */}
             <button
               onClick={closeModal}
-              className="absolute top-2 right-2 text-black hover:text-accent transition-colors duration-300 z-20"
+              className="absolute top-4 right-4 bg-white/10 hover:bg-red-500 text-black p-2 rounded-full transition-all duration-300 z-20 shadow-lg backdrop-blur-sm"
             >
-              <X className="w-8 h-8 bg-black" />
+              <X className="w-5 h-5" />
             </button>
+
 
 
             {/* Image Container */}

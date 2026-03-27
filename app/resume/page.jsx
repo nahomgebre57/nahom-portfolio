@@ -79,15 +79,21 @@ const experience = {
     "Progressive journey through various roles in web development, from internships to professional positions, building expertise in modern technologies.",
   items: [
     {
+      company: "Ethix",
+      position: "Machine Learning Engineer",
+      duration: "Nov 2025 - Present",
+      description: "Building machine learning models using Python, TensorFlow, and PyTorch."
+    },
+    {
       company: "Kuraz Technologies",
       position: "Frontend Developer Intern",
-      duration: "2025 - Present",
+      duration: "June 2025 - September 2025",
       description: "Developing responsive user interfaces using React and TypeScript"
     },
     {
       company: "Oasis Infobyte",
       position: "Web Development Intern",
-      duration: "2025 - Present",
+      duration: "Jan 2025 - March 2025",
       description: "Building full-stack applications and improving UI/UX design skills"
     },
     {

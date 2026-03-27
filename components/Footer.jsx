@@ -11,7 +11,7 @@ const Footer = () => {
             Nahom Gebre
           </h2>
           <p className="text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} Nahom Gebre. All rights reserved.
+            &copy; 2026 Nahom Gebre. All rights reserved.
           </p>
         </div>
 

@@ -5,45 +5,48 @@ import Image from "next/image";
 
 const Photo = () => {
   return <div className="w-full h-full relative">
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: {delay: 2, duration: 0.4, ease: "easeIn"},
+    <motion.div initial={{ opacity: 0 }} animate={{
+      opacity: 1, transition: { delay: 2, duration: 0.4, ease: "easeIn" },
     }} >
 
       {/* image */}
-        <motion.div
-        initial={{ opacity: 0 }} animate={{ opacity: 1, transition: {delay: 2.4, duration: 0.4, ease: "easeOut"},
-  }}
-        
-        
-        className="w-[298px] h-[298px] xl:w-w[498px] xl:h-[498px] mix-blend-lighten absolute overflow-hidden radius-full"  style={{
-    clipPath: 'circle(50% at 49% 39%)',
-    borderRadius: '50%',
-  }}>
-          
-            <Image
-                src="/assets/photo.png" priority quality={100} fill alt="" className="object-contain"
-                
-            />  
-        </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }} animate={{
+          opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeOut" },
+        }}
 
-        {/* circle */}
-        <motion.svg className="w-[300px] xl:w-[506] h-[300px] xl:h-[506px]" fill="transparent"
+
+       className="w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] mix-blend-lighten absolute top-1/2 left-[20%] -translate-y-1/2 overflow-hidden rounded-full" style={{
+          clipPath: 'circle(50% at 49% 39%)',
+          borderRadius: '50%',
+        }}>
+
+        <Image
+          src="/assets/photo.png" priority quality={100} fill alt="" className="object-contain"
+
+        />
+      </motion.div>
+
+      {/* circle */}
+      <motion.svg className="w-[300px] xl:w-[506] h-[300px] xl:h-[506px]" fill="transparent"
         viewBox="0 0 506 506"
         xmlns="http://www.w3.org/2000/svg"
-        >
-          <motion.circle cx="253" cy="253" r="250" stroke="#00ff99" strokeWidth="4"
+      >
+        <motion.circle cx="253" cy="253" r="180" stroke="#00ff99" strokeWidth="4"
           strokeLinecap="round"
           strokeLinejoin="round"
-          initial={{ strokeDasharray: "24 10 0 0"}}
-          animate={{ strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"], 
+          initial={{ strokeDasharray: "24 10 0 0" }}
+          animate={{
+            strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
             rotate: [120, 360],
           }}
-          transition={{ 
+          transition={{
             duration: 20,
             repeat: Infinity,
             repeatType: "reverse"
           }}
-          />
-        </motion.svg>
+        />
+      </motion.svg>
     </motion.div>
   </div>;
 };
